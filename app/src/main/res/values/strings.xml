@@ -1,0 +1,6 @@
+<resources>
+    <string name="app_name">e-fi</string>
+    <string name="back4app_server_url">https://parseapi.back4app.com/</string>
+    <string name="back4app_app_id">kJxVydy205LZW5XNSUiJ6nfayamdQ1SeqdLIYHOm</string>
+    <string name="back4app_client_key">tw5fgJRH5k4xuaC76ug75Iw1oR99JIXhqW3h8m5O</string>
+</resources>
