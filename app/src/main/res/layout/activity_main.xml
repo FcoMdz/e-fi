@@ -19,13 +19,24 @@
         android:textSize="24sp"
         android:textStyle="bold" />
 
+    <ImageView
+        android:layout_width="wrap_content"
+        android:layout_height="600px"
+        android:layout_below="@id/textView"
+        android:src="@drawable/logo"
+        android:id="@+id/logo"
+        >
+
+    </ImageView>
+
     <EditText
         android:id="@+id/usernameEditText"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_below="@id/textView"
+        android:layout_below="@id/logo"
         android:layout_marginTop="16dp"
         android:hint="Usuario"
+        android:textColor="@color/logo_gray"
         android:inputType="text" />
 
     <EditText
@@ -34,6 +45,7 @@
         android:layout_height="wrap_content"
         android:layout_below="@id/usernameEditText"
         android:layout_marginTop="8dp"
+        android:textColor="@color/logo_gray"
         android:hint="Contraseña"
         android:inputType="textPassword" />
 
@@ -44,6 +56,7 @@
         android:layout_below="@id/passwordEditText"
         android:layout_marginTop="16dp"
         android:text="Iniciar Sesión"
+        android:textColor="@color/black"
         android:onClick="login" />
 
 </RelativeLayout>

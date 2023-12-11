@@ -3,5 +3,13 @@
     <style name="Base.Theme.Efi" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your dark theme here. -->
         <!-- <item name="colorPrimary">@color/my_dark_primary</item> -->
+        <item name="colorPrimary">@color/logo_gray</item>
+        <item name="colorSecondary">@color/logo_gray</item>
+        <item name="android:windowBackground">@color/logo_black</item>
+        <item name="android:textColor">@color/logo_gray</item>
+        <item name="android:textColorPrimary">@color/logo_gray</item>
+        <item name="android:textColorSecondary">@color/logo_gray</item>
+        <item name="buttonTint">@color/black</item>
+        <item name="android:textColorHint">@color/logo_gray</item>
     </style>
 </resources>
