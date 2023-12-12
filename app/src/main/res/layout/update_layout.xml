@@ -1,0 +1,61 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <EditText
+        android:id="@+id/nuevoNombreEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nuevo Correo"
+        android:layout_marginTop="16dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <EditText
+        android:id="@+id/nuevaFechaEditText"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:hint="Nueva Fecha de Emisión"
+        android:inputType="date"
+        android:layout_below="@id/nuevoNombreEditText"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/subirNuevaImagenButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subir Nueva Imagen"
+        android:layout_below="@id/nuevaFechaEditText"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/subirNuevoArchivoButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Subir Nuevo Archivo de Texto"
+        android:layout_below="@id/subirNuevaImagenButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+    <Button
+        android:id="@+id/actualizarButton"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Actualizar Datos"
+        android:layout_below="@id/subirNuevoArchivoButton"
+        android:layout_marginTop="8dp"
+        android:layout_marginLeft="16dp"
+        android:layout_marginRight="16dp"
+        android:layout_marginBottom="8dp" />
+
+</RelativeLayout>
