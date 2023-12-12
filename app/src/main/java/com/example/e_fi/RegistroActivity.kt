@@ -6,6 +6,7 @@ import android.content.Intent
 import android.net.Uri
 import android.os.Bundle
 import android.provider.OpenableColumns
+import android.text.Editable
 import android.util.Log
 import android.widget.Button
 import android.widget.EditText
@@ -108,6 +109,15 @@ class RegistroActivity : AppCompatActivity() {
                     if(e == null){
                         //Exito al subir los datos
                         Toast.makeText(this@RegistroActivity, "Registro exitoso", Toast.LENGTH_SHORT).show()
+                        nombreEditText.text = Editable.Factory.getInstance().newEditable("")
+                        contrasenaEditText.text = Editable.Factory.getInstance().newEditable("")
+                        correoEditText.text = Editable.Factory.getInstance().newEditable("")
+                        rfcEditText.text = Editable.Factory.getInstance().newEditable("")
+                        fechaEditText.text = "Seleccionar fecha de registro"
+                        subirKeyButton.text = "Subir archivo key"
+                        subirCerButton.text = "Subir archivo cer"
+                        selectedKeyUri = null
+                        selectedCerUri = null
                     }else{
                         Toast.makeText(this@RegistroActivity, "Ha fallado el registro",
                             Toast.LENGTH_SHORT).show()

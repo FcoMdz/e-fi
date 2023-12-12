@@ -15,19 +15,21 @@ import com.parse.ParseQuery
 class MainActivity : AppCompatActivity() {
     private lateinit var username: EditText
     private lateinit var password: EditText
+    private lateinit var loginButton: Button
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
         username = findViewById(R.id.usernameEditText)
         password = findViewById(R.id.passwordEditText)
 
-        val loginButton: Button = findViewById(R.id.loginButton)
+        loginButton = findViewById(R.id.loginButton)
         loginButton.setOnClickListener {
             login()
         }
     }
     fun login() {
         val inicioActivity = Intent(this, FirmasActivity::class.java)
+        loginButton.isEnabled = false
         val username = this.username.text.toString()
         val password = this.password.text.toString()
         this.password.setText("")
@@ -60,6 +62,7 @@ class MainActivity : AppCompatActivity() {
                     Toast.makeText(this@MainActivity, "Usuario incorrecto",
                         Toast.LENGTH_SHORT).show()
                 }
+                loginButton.isEnabled = true
             }
         })
 
