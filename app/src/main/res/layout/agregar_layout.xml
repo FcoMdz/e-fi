@@ -1,0 +1,85 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="16dp">
+
+            <TextView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Registro"
+                android:textSize="24sp"
+                android:textStyle="bold"
+                android:layout_gravity="center"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/nombreEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Nombre"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/correoEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Correo Electrónico (contacto)"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+            <EditText
+                android:id="@+id/contrasenaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Contraseña"
+                android:inputType="textPassword"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/rfcEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="RFC"
+                android:inputType="text"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/subirImagenButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Subir e-firma"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/subirArchivoButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Seleccionar Key"
+                android:layout_marginBottom="16dp"/>
+
+            <EditText
+                android:id="@+id/fechaEditText"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:hint="Fecha de Registro"
+                android:inputType="date"
+                android:layout_marginBottom="16dp"/>
+
+            <Button
+                android:id="@+id/registrarButton"
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:text="Registrar"/>
+        </LinearLayout>
+    </ScrollView>
+</RelativeLayout>
