@@ -116,12 +116,13 @@ class ActualizacionActivity : AppCompatActivity() {
                     val llave = convertTextFileToBytes(selectedKeyUri!!)
                     val key = ParseFile(subirKeyButton.text.toString(), llave)
                     objetoAActualizar?.apply {
-                        put("nombre", nuevoNombre)
+                        put("contacto", nuevoNombre)
                         put("fecha_emision", fechaSeleccionada!!)
                         put("cer", cert)
                         put("key", key)
                     }
                     // Guardar los cambios
+                    actualizarButton.isEnabled = false
                     objetoAActualizar.saveInBackground { e ->
                         if (e == null) {
                             // Éxito al guardar en Parse
@@ -130,6 +131,7 @@ class ActualizacionActivity : AppCompatActivity() {
                                 "Actualización exitosa",
                                 Toast.LENGTH_SHORT
                             ).show()
+                            finish()
                         } else {
                             // Error al guardar en Parse
                             Toast.makeText(

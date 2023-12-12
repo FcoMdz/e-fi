@@ -29,6 +29,8 @@
             android:exported="true"/>
         <activity android:name=".ActualizacionActivity"
             android:exported="true"/>
+        <activity android:name=".FirmasActivity"
+            android:exported="true"/>
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />

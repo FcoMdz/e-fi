@@ -27,7 +27,7 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun login() {
-        val inicioActivity = Intent(this, ActualizacionActivity::class.java)
+        val inicioActivity = Intent(this, FirmasActivity::class.java)
         val username = this.username.text.toString()
         val password = this.password.text.toString()
         this.password.setText("")
@@ -46,8 +46,8 @@ class MainActivity : AppCompatActivity() {
                         // La contraseña es correcta, realiza las acciones necesarias
                         Toast.makeText(this@MainActivity, "Inicio de sesión exitoso",
                             Toast.LENGTH_SHORT).show()
-                        inicioActivity.putExtra("id", "kPUmnMKMgK")
-                        inicioActivity.putExtra("cliente", "geras")
+                        //inicioActivity.putExtra("id", "kPUmnMKMgK")
+                        //inicioActivity.putExtra("cliente", "geras")
                         startActivity(inicioActivity)
                         // Puedes redirigir a la siguiente actividad aquí
                     } else {
