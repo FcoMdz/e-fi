@@ -1,9 +1,11 @@
 package com.example.e_fi
 
+import android.content.Intent
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
 import android.widget.Button
 import android.widget.EditText
+import android.widget.TextView
 import android.widget.Toast
 import com.parse.GetCallback
 import com.parse.ParseException
@@ -25,8 +27,10 @@ class MainActivity : AppCompatActivity() {
         }
     }
     fun login() {
-        val username = username.text.toString()
-        val password = password.text.toString()
+        val inicioActivity = Intent(this, RegistroActivity::class.java)
+        val username = this.username.text.toString()
+        val password = this.password.text.toString()
+        this.password.setText("")
         val usr:ParseQuery<ParseObject> = ParseQuery.getQuery("usr")
         usr.whereEqualTo("name",username)
         usr.getFirstInBackground(object : GetCallback<ParseObject> {
@@ -42,6 +46,7 @@ class MainActivity : AppCompatActivity() {
                         // La contraseña es correcta, realiza las acciones necesarias
                         Toast.makeText(this@MainActivity, "Inicio de sesión exitoso",
                             Toast.LENGTH_SHORT).show()
+                        startActivity(inicioActivity)
                         // Puedes redirigir a la siguiente actividad aquí
                     } else {
                         // La contraseña es incorrecta

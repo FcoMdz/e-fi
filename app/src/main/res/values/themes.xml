@@ -3,7 +3,7 @@
     <style name="Base.Theme.Efi" parent="Theme.Material3.DayNight.NoActionBar">
         <!-- Customize your light theme here. -->
         <item name="colorPrimary">@color/logo_gray</item>
-        <item name="colorSecondary">@color/logo_gray</item>
+        <item name="colorSecondary">@color/logo_black</item>
         <item name="android:windowBackground">@color/logo_black</item>
         <item name="android:textColor">@color/logo_gray</item>
         <item name="android:textColorPrimary">@color/logo_gray</item>
