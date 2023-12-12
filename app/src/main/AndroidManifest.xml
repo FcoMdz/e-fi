@@ -27,6 +27,8 @@
         </activity>
         <activity android:name=".RegistroActivity"
             android:exported="true"/>
+        <activity android:name=".ActualizacionActivity"
+            android:exported="true"/>
         <meta-data
             android:name="com.parse.SERVER_URL"
             android:value="@string/back4app_server_url" />
