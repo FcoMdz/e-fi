@@ -2,7 +2,6 @@ package com.example.e_fi
 
 import androidx.appcompat.app.AppCompatActivity
 import android.os.Bundle
-import android.util.Log
 import android.widget.Button
 import android.widget.EditText
 import android.widget.Toast
@@ -24,15 +23,6 @@ class MainActivity : AppCompatActivity() {
         loginButton.setOnClickListener {
             login()
         }
-        /*val firstObject = ParseObject("FirstClass")
-        firstObject.put("message","Hey ! First message from android. Parse is now connected")
-        firstObject.saveInBackground {
-            if (it != null){
-                it.localizedMessage?.let { message -> Log.e("MainActivity", message) }
-            }else{
-                Log.d("MainActivity","Object saved.")
-            }
-        }*/
     }
     fun login() {
         val username = username.text.toString()
