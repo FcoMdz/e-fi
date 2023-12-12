@@ -78,6 +78,7 @@ class RegistroActivity : AppCompatActivity() {
                 calendar.get(Calendar.MONTH),
                 calendar.get(Calendar.DAY_OF_MONTH)
             )
+            datePickerDialog.datePicker.maxDate = calendar.timeInMillis
             // Mostrar el DatePickerDialog
             datePickerDialog.show()
         }
