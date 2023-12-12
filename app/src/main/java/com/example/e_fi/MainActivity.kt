@@ -42,22 +42,26 @@ class MainActivity : AppCompatActivity() {
         usr.getFirstInBackground(object : GetCallback<ParseObject> {
             override fun done(User: ParseObject?, e: ParseException?) {
                 if (e == null && User != null) {
-                    val storedPassword = User.getString("passwd") // Asume que la contraseña se almacena en una columna llamada "password"
+                    val storedPassword = User.getString("passwd")
+                    // Asume que la contraseña se almacena en una columna llamada "password"
 
                     // Ahora compara la contraseña ingresada con la almacenada
                     val enteredPassword = password
 
                     if (enteredPassword == storedPassword) {
                         // La contraseña es correcta, realiza las acciones necesarias
-                        Toast.makeText(this@MainActivity, "Inicio de sesión exitoso", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "Inicio de sesión exitoso",
+                            Toast.LENGTH_SHORT).show()
                         // Puedes redirigir a la siguiente actividad aquí
                     } else {
                         // La contraseña es incorrecta
-                        Toast.makeText(this@MainActivity, "Contraseña incorrecta", Toast.LENGTH_SHORT).show()
+                        Toast.makeText(this@MainActivity, "Contraseña incorrecta",
+                            Toast.LENGTH_SHORT).show()
                     }
                 } else {
                     // Algo salió mal al recuperar el objeto del jugador
-                    Toast.makeText(this@MainActivity, "Usuario incorrecto", Toast.LENGTH_SHORT).show()
+                    Toast.makeText(this@MainActivity, "Usuario incorrecto",
+                        Toast.LENGTH_SHORT).show()
                 }
             }
         })
